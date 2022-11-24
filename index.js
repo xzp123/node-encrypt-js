@@ -4510,7 +4510,7 @@ ASN1.test = function () {
                 });
                 return hex2b64(ct_1);
             }
-            var t = this.encrypt(text);
+            var t = _this.getKey().encrypt(text);
             var y = hex2b64(t);
             return y;
         }
@@ -4537,7 +4537,7 @@ ASN1.test = function () {
                 });
                 return ct_2;
             }
-            var y = this.decrypt(text);
+            var y = _this.getKey().decrypt(text);
             return y;
         }
         catch (ex) {
